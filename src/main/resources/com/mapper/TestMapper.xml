@@ -2,7 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mapper.TestMapper">
+	<sql id="testCol">${column}</sql>
 	<select id="getTestBean" resultType="com.domain.TestBean">
-		SELECT * FROM TEST
+		SELECT
+		<include refid="testCol"><property name="column" value="NO"></property></include>
+		,
+		<include refid="testCol"><property name="column" value="NAME"></property></include>
+		FROM TEST
 	</select>
 </mapper>
