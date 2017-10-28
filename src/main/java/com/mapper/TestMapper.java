@@ -7,4 +7,6 @@ import com.domain.TestBean;
 public interface TestMapper {
 
 	List<TestBean> getTestBean();
+
+	TestBean selectTestBeanByPrimaryKey(String no);
 }

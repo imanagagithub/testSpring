@@ -2,8 +2,6 @@ package com.controller;
 
 import static org.springframework.web.bind.annotation.RequestMethod.*;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,12 +18,10 @@ public class SampleController {
 	@RequestMapping(value = "/", method = GET)
 	public String show() {
 
-		List<TestBean> list = this.testMapper.getTestBean();
+		TestBean testBean = this.testMapper.selectTestBeanByPrimaryKey("1");
 
-		list.forEach(x -> {
-			System.out.println(x.getNo());
-			System.out.println(x.getName());
-		});
+		System.out.println(testBean.getName());
+		System.out.println(testBean.getNo());
 
 		return "test";
 	}

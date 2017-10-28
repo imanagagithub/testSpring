@@ -5,9 +5,11 @@
 	<sql id="testCol">${column}</sql>
 	<select id="getTestBean" resultType="com.domain.TestBean">
 		SELECT
-		<include refid="testCol"><property name="column" value="NO"></property></include>
-		,
+		<include refid="testCol"><property name="column" value="NO"></property></include>,
 		<include refid="testCol"><property name="column" value="NAME"></property></include>
 		FROM TEST
+	</select>
+	<select id="selectTestBeanByPrimaryKey" parameterType="string" resultType="com.domain.TestBean">
+	    SELECT * FROM TEST WHERE NO = #{no};
 	</select>
 </mapper>

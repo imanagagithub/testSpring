@@ -9,7 +9,12 @@ import lombok.Setter;
 @AllArgsConstructor
 public class TestBean {
 
+	public TestBean() {
+	}
+
 	private Integer no;
+
+	private String testId;
 
 	private String name;
 }
