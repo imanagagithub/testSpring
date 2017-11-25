@@ -20,5 +20,38 @@
 			<!-- /ko -->
 		</div>
 	</div>
+
+	<div class="contents">
+		<div class="row">
+			<div class="col companyInfo">
+				<div class="row">ヘッダー</div>
+				<div class="row">
+					<div class="col">ラベル</div>
+					<div class="col">バリュー</div>
+				</div>
+				<div class="row">
+					<div class="col">ラベル</div>
+					<div class="col">バリュー</div>
+				</div>
+			</div>
+			<div class="col companyGuidline">
+				<div class="row">ヘッダー</div>
+				<div class="row">
+					<div class="col">グループ</div>
+					<div class="col">
+						<div class="row">
+							<div class="col">ラベル</div>
+							<div class="col">バリュー</div>
+						</div>
+						<div class="row">
+							<div class="col">ラベル</div>
+							<div class="col">バリュー</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>

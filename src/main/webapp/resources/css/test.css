@@ -1,3 +1,37 @@
-h1 {
-	color: red;
+.contents{
+	border: 1px black solid;
+}
+
+.companyInfo {
+	width: 40%;
+	box-sizing: border-box;
+}
+
+.companyGuidline {
+	width: 60%;
+	box-sizing: border-box;
+}
+
+.row {
+	border-bottom: 1px black solid;
+}
+
+.row:after {
+	content: " ";
+	clear: both;
+	visibility: hidden;
+	display: block;
+}
+
+.row > .col {
+	float: left;
+	border-right: 1px black solid;
+}
+
+.col:last-child {
+	border-right: hidden;
+}
+
+.row:last-child {
+	border-bottom: hidden;
 }
